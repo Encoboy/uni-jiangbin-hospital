@@ -1,5 +1,4 @@
 // 封装request请求文件
-
 import {errData} from './errHandel.js';
 
 // POST 请求
@@ -20,6 +19,9 @@ export const post = function(url,params={}){
 		})
 	})
 }
+
+// GET 请求
+
 
 
 
