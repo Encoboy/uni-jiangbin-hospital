@@ -1,0 +1,200 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ 
+		{
+			"path":"pages/login/login",
+			"style":{
+				"navigationBarTitleText":"登录"
+			}
+		},
+		{
+			"path":"pages/register/register",
+			"style":{
+				"navigationBarTitleText":"注册"
+			}
+		},
+		
+		{
+			"path":"pages/home/home",
+			"style":{
+				"navigationBarTitleText":"首页"
+			}
+		},
+		{
+			"path":"pages/home/dataVisualization/dataVisualization",
+			"style":{
+				"navigationBarTitleText":"健康数据信息"
+			}
+		},
+		{
+			"path":"pages/home/inhabitantInfo/inhabitantInfo",
+			"style":{
+				"navigationBarTitleText":"居民信息列表"
+			}
+		},
+		{
+			"path":"pages/home/feedback/feedback",
+			"style":{
+				"navigationBarTitleText":"医生反馈"
+			}
+		},
+		
+		{
+			"path":"pages/workdesk/workdesk",
+			"style":{
+				"navigationBarTitleText":"工作台"
+			}
+		},
+		{
+			"path":"pages/workdesk/compositeSeach/compositeSeach",
+			"style":{
+				"navigationBarTitleText":"综合查询"
+			}
+		},
+		{
+			"path":"pages/workdesk/compositeSeach/addplan/addplan",
+			"style":{
+				"navigationBarTitleText":"新增随访计划"
+			}
+		},
+		{
+			"path":"pages/workdesk/compositeSeach/selectdoctorlist/selectdoctorlist",
+			"style":{
+				"navigationBarTitleText":"选择随访医生"
+			}
+		},
+		{
+			"path":"pages/workdesk/plan/plan",
+			"style":{
+				"navigationBarTitleText":"随访计划"
+			}
+		},
+		{
+			"path":"pages/workdesk/statistics/statistics",
+			"style":{
+				"navigationBarTitleText":"随访统计"
+			}
+		},
+		{
+			"path":"pages/workdesk/workcase/workcase",
+			"style":{
+				"navigationBarTitleText":"今日工作概况"
+			}
+		},
+		{
+			"path":"pages/workdesk/workSearch/workSearch",
+			"style":{
+				"navigationBarTitleText":"工作情况查询"
+			}
+		},
+		{
+			"path":"pages/workdesk/usercenter/usercenter",
+			"style":{
+				"navigationBarTitleText":"个人中心"
+			}
+		},
+		{
+			"path":"pages/workdesk/usercenter/changedoctorInfo/changedoctorInfo",
+			"style":{
+				"navigationBarTitleText":"修改信息"
+			}
+		},
+		{
+			"path": "pages/conversations/conversations",
+			"style": {
+				"navigationBarTitleText": "会话",
+				"navigationBarBackgroundColor" : "#F3F4F7",
+				"navigationBarTextStyle" : "black"
+				// "app-plus" : {
+				// 	"titleNView" : true
+				// }
+			}			
+		},
+		{
+			"path": "pages/contacts/contacts",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"navigationBarBackgroundColor" : "#F3F4F7",
+				"navigationBarTextStyle" : "black"
+			}			
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor" : "#F3F4F7",
+				"navigationBarTextStyle" : "black"
+			}			
+		},
+		{
+			"path": "pages/chat/privateChat/privateChat",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationBarBackgroundColor" : "#F3F4F7",
+				"enablePullDownRefresh": true
+			}			
+		},
+		{
+			"path": "pages/chat/groupChat/groupChat",
+			"style": {
+				"navigationBarTitleText": "群",
+				"navigationBarBackgroundColor" : "#F3F4F7",
+				"enablePullDownRefresh": true
+			}			
+		},
+		{
+			"path": "pages/chat/groupChat/member",
+			"style": {
+				"navigationBarTitleText": "群成员",
+				"navigationBarBackgroundColor" : "#F3F4F7"
+			}			
+		},
+		{
+			"path": "pages/chat/customMessage/customMessage",
+			"style": {
+				"navigationBarTitleText": "自定义消息示例",
+				"navigationBarBackgroundColor" : "#F3F4F7"
+			}
+		},
+		// 测试页
+		{
+			"path": "pages/test/text",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+		// "app-plus":{
+		// 	"titleNView":false
+		// }
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/home/home",
+	        "iconPath": "static/img/home-tabbar.png",
+	        "selectedIconPath": "static/img/home-tabbared.png",
+	        "text": ""
+	    }, {
+	        "pagePath": "pages/workdesk/workdesk",
+	        "iconPath": "static/img/work-tabbar.png",
+	        "selectedIconPath": "static/img/work-tabbared.png",
+	        "text": ""
+	    },{
+	        "pagePath": "pages/conversations/conversations",
+	        "iconPath": "static/img/chat-notselect.png",
+	        "selectedIconPath": "static/img/chat-select.png",
+	        "text": ""
+	    }]
+	}
+}

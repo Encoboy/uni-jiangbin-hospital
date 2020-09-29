@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2083749 */
+  src: url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.eot');
+  src: url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_2083749_3g0tsn3oapt.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-browse:before {
+  content: "\e666";
+}
+
+.icon-lock:before {
+  content: "\e676";
+}
+
+.icon-user:before {
+  content: "\e682";
+}
+
+.icon-xingmingyonghumingnicheng:before {
+  content: "\e623";
+}
+
+.icon-mima:before {
+  content: "\e608";
+}
+
+.icon-geren:before {
+  content: "\e66e";
+}
