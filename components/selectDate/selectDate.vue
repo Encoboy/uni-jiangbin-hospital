@@ -1,6 +1,6 @@
 <template>
 	<view class="select-date">
-		<text class="date-title">选择日期 </text>
+		<text class="date-title">日期 : </text>
 		<view class="date-box"  @click="show = true">
 			<text style="margin-left: 20rpx;">{{startDate}}</text>
 			<text>{{startDate?'~':''}}</text>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+	import { timeFilter } from '@/util/util.js';
 	export default {
 		data() {
 			return {
@@ -21,14 +22,18 @@
 				endDate:'',
 			}
 		},
-
+		created() {
+			const time = timeFilter(new Date())
+			this.startDate = time;
+			this.endDate = time;
+		},
 		methods: {
 			change(e) {
-				console.log(e);
 				this.startDate = e.startDate;
 				this.endDate = e.endDate;
 			},
-		}
+		},
+
 	}
 </script>
 

@@ -1,7 +1,7 @@
 // 错误提示
 
 const errdata = {
-	errlist(err){
+	errTest(err){
 		uni.showToast({
 			icon:'none',
 			title:err,

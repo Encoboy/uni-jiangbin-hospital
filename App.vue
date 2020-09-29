@@ -10,7 +10,8 @@
 			console.log('App Hide')
 		},
 		globalData : {
-			imService : null
+			imService : null,
+			isDocutorAppLogin:true
 		}
 	}
 </script>
