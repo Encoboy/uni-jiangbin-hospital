@@ -69,6 +69,8 @@
 	import UserInfo from '@/components/userinfo/userinfo.vue';
 	import LineChartList from '../components/lineChartList.vue';
 	import TableRecord from './components/table-record.vue';
+	import {post} from '@/api/docApi/request.js';
+	import {singlePatientInfoUrl} from '@/api/docApi/api.js'
 	export default {
 		components: {
 			'user-info':UserInfo,
@@ -174,12 +176,24 @@
 					url:'/pages/doctorpage/userCenter/component/editUserInfo'
 				})
 			},
+			getSinglePatientInfo(id){
+				let params = {
+					id:id
+				}
+				post(singlePatientInfoUrl,params).then(res => {
+					console.log('患者数据：',res);
+					this.userInfoData = res.data.result;
+				}).catch(err => {
+					console.log('err:',err);
+				})
+			}
 			
 		},
 		onLoad(options) {
 			console.log('url传过来的参数：',options);
 			const res = uni.getSystemInfoSync();
 			this.windowHeight = res.windowHeight;
+			this.getSinglePatientInfo(options.id);
 		}
 	}
 </script>
