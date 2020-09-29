@@ -3,7 +3,7 @@
 		<scroll-view class="conversations" scroll-y="true">
 			<view v-if="conversations && conversations.conversations && conversations.conversations.length !=0">
 				<view class="scroll-item" v-for="(conversation, key) in conversations.conversations" :key="key">
-					<view class="item-head">
+					<view class="item-head" @click="navigateToChat(conversation)">
 						<image :src="friends[conversation.userId] && friends[conversation.userId].avatar" v-if="conversation.type == 'private'" class="head-icon"></image>
 						<image src="/static/images/group.png" v-else  class="head-icon"></image>
 						<view class="item-head_unread" v-if="conversation.unread>0">{{conversation.unread}}</view>
