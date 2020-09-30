@@ -8,7 +8,6 @@
 		</view>
 		<sing-date></sing-date>
 		<view class="table-box">
-			
 			<u-table class="table-title">
 				<u-tr>
 					<block v-for="(item,index) in tabelThArr" :key="index">
@@ -190,6 +189,8 @@
 			margin-top: 30rpx;
 			.table-content{
 				overflow-y: scroll;
+				flex: 1;
+				flex-basis: 0;
 				.name{
 					color:blue;
 				}
@@ -204,7 +205,7 @@
 						text-align: center;
 						line-height: 50rpx;
 						border-radius: 10rpx;
-						font-size: 12rpx;
+						font-size: 20rpx;
 					}
 				}
 			}

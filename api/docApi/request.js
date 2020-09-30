@@ -9,9 +9,15 @@ export const post = function(url,params={}){
 			method:'POST',
 			data:params,
 		}).then((res) => {
-			console.log('res:',res);
+			console.log('res-mock:',res);
 			const data = res[1]; // mock数据
-			resolve(data)
+			if(data.statusCode == '200'){
+				resolve(data);	
+			}else{
+				console.log('errData:',errData)
+				errData.errTest(res[0].errMsg)
+			}
+			
 		}).catch(err => {
 			let errs = '服务器错误,请稍候再试';
 			errData.errTest(errs);
@@ -19,6 +25,7 @@ export const post = function(url,params={}){
 		})
 	})
 }
+
 
 // GET 请求
 

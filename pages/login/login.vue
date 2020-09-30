@@ -10,7 +10,7 @@
 			<view class="login-text">
 				登  录
 			</view>
-			 <form class="form" @submit="formSubmit" @reset="formRegister">
+			 <form class="form">
 					<view class="app-select">
 						<view class="doctor" :style="{backgroundColor:isSelectAppDoc?selectAppColor:''}" @click="selectType('doctor')">
 							医生登录
