@@ -4,7 +4,7 @@
 			<image src="@/static/img/title-img.png" mode="aspectFit"></image>
 		</view>
 		<!-- 选择日期 -->
-		<single-date></single-date>
+		<single-date :lrMargin="lrMargin" ></single-date>
 		<view class="radio-box">
 			<u-radio-group v-model="radioValue">
 				<u-radio 
@@ -65,6 +65,7 @@
 		data() {
 			return {
 				windowHeight:0,
+				lrMargin:20+"px",
 				list: [
 					{
 						name: '柱状图',
@@ -126,15 +127,23 @@
 
 <style lang="scss">
 	.hospital-box{
-		// padding: 0 10px 0 0;
+		padding: 0;
+		.header-img-box{
+			margin:0 20px 0px 20px;
+		}
 		.radio-box{
 			flex: 1;
 			flex-basis: 0;
 			text-align: end;
+			// line-height: 100rpx;
+			margin: 0 20px;
 		}
 		.chart-box {
 			flex: 6.5;
 			flex-basis: 0;
+			.table-box{
+				margin: 0 20px
+			}
 		}
 	}
 </style>

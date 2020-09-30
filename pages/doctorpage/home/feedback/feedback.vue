@@ -53,7 +53,7 @@
 		},
 		methods: {
 			cancel(){
-				uni.switchTab({
+				uni.navigateTo({
 					url:'/pages/doctorpage/home/home'
 				})
 			}
