@@ -12,3 +12,7 @@ export const singlePatientInfoUrl = publicUrl + '/docutor/singlePatientInfo';
 //  工作台
 // 综合查询
 export const compositeSearchUrl = publicUrl + '/docutor/compositeSearch';
+
+// IM 通信
+// 获取医生用户
+export const docutorUserUrl = publicUrl + '/im/docutorUsers';

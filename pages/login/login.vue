@@ -60,6 +60,7 @@
 
 <script>
 	import IMService from "@/lib/imservice";
+	import restApi from '@/lib/restapi.js';
 	export default {
 		data() {
 			return {
@@ -93,9 +94,12 @@
 				uni.showLoading({
 					title:"登录中..."
 				});
-				setTimeout(()=>{
+				
+				setTimeout( async ()=>{
 					// 隐藏登录状态
 					uni.hideLoading();
+					await restApi.getUserData();
+					console.log('执行顺序')
 					getApp().globalData.imService = new IMService();
 					let loginResult = getApp().globalData.imService.login(this.username, this.password);
 					if (loginResult) {
