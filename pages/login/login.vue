@@ -10,7 +10,7 @@
 			<view class="login-text">
 				登  录
 			</view>
-			 <form class="form" @submit="formSubmit" @reset="formRegister">
+			 <form class="form">
 					<view class="app-select">
 						<view class="doctor" :style="{backgroundColor:isSelectAppDoc?selectAppColor:''}" @click="selectType('doctor')">
 							医生登录
@@ -60,6 +60,7 @@
 
 <script>
 	import IMService from "@/lib/imservice";
+	import restApi from '@/lib/restapi.js';
 	export default {
 		data() {
 			return {
@@ -93,9 +94,12 @@
 				uni.showLoading({
 					title:"登录中..."
 				});
-				setTimeout(()=>{
+				
+				setTimeout( async ()=>{
 					// 隐藏登录状态
 					uni.hideLoading();
+					await restApi.getUserData();
+					console.log('执行顺序')
 					getApp().globalData.imService = new IMService();
 					let loginResult = getApp().globalData.imService.login(this.username, this.password);
 					if (loginResult) {
@@ -114,6 +118,15 @@
 							icon:'none',
 						})
 					}
+					
+					// 不用模拟登录
+					// getApp().globalData.imService.connectIM();
+					// const doctorLogin = '/pages/doctorpage/home/home';
+					// const patientLogin = '/pages/patientpage/home/home'
+					// uni.navigateTo({
+					// 	url: this.isSelectDoctorAppLogin?doctorLogin:patientLogin,
+					// 	success() {}
+					// })
 				},0)
 			},
 			// 判断验证是否符合要求

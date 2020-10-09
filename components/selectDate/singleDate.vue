@@ -1,5 +1,5 @@
 <template>
-	<view class="">
+	<view class="" :style="{margin:lrMargin}">
 		<view class="select-date">
 			<text class="date-title">开始日期 : </text>
 			<view class="date-box"  @click="show1 = true">
@@ -23,6 +23,11 @@
 <script>
 	import { timeFilter } from '@/util/util.js';
 	export default {
+		props:{
+			lrMargin:{
+				default:0
+			}
+		},
 		data() {
 			return {
 				show1: false,

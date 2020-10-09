@@ -16,20 +16,22 @@
 			</view>
 		</view>
 		<view class="table-box">
-			<scroll-view scroll-x="true" scroll-y="true" >
+			<scroll-view scroll-x="true" class="scroll">
+				<u-table style="width: 220%;" class="table">
+					<u-tr class="title">
+						<u-th>序号</u-th>
+						<u-th>姓名</u-th>
+						<u-th>性别</u-th>
+						<u-th width="25%">证件号码</u-th>
+						<u-th>民族</u-th>
+						<u-th width="15%">联系电话</u-th>
+						<u-th width="10%">主治医生</u-th>
+						<u-th width="25%">操作</u-th>
+					</u-tr>
+				</u-table>
 				<view class="scroll-box">
-					<u-table>
-						<u-tr>
-							<u-th>序号</u-th>
-							<u-th>姓名</u-th>
-							<u-th>性别</u-th>
-							<u-th width="25%">证件号码</u-th>
-							<u-th>民族</u-th>
-							<u-th width="15%">联系电话</u-th>
-							<u-th width="10%">主治医生</u-th>
-							<u-th width="25%">操作</u-th>
-						</u-tr>
-						<block v-for="(item,index) in datalist" :key="index">
+					<u-table >
+						<block class="block" v-for="(item,index) in datalist" :key="index">
 							<u-tr>
 								<u-td>{{item.id}}</u-td>
 								<u-td>
@@ -62,7 +64,10 @@
 </template>
 
 <script>
+	import { compositeSearchUrl } from '@/api/docApi/api.js';
+	import { post } from '@/api/docApi/request.js';
 	export default {
+		
 		data() {
 			return {
 				windowHeight:0,
@@ -99,6 +104,7 @@
 		onLoad() {
 			const res = uni.getSystemInfoSync();
 			this.windowHeight = res.windowHeight;
+			this.getData();
 		},
 		methods: {	
 			confirm(e) {
@@ -111,6 +117,13 @@
 			goAddPlan(){
 				uni.navigateTo({
 					url:'/pages/doctorpage/workdesk/compositeSeach/addplan/addplan'
+				})
+			},
+			getData(){
+				post(compositeSearchUrl).then(res => {
+					this.datalist = res.data.result;
+				}).catch(err => {
+					console.log(err);
 				})
 			}
 		}
@@ -150,7 +163,8 @@
 		padding-top: 100rpx;
 		.scroll-box {
 			width: 220%;
-			height: 425rpx ;
+			height: 500rpx;
+			overflow-y: scroll;
 			.action{
 				display: flex;
 				flex-direction: row;
@@ -174,6 +188,7 @@
 				}
 			}
 		}
+		
 	}
 }
 </style>

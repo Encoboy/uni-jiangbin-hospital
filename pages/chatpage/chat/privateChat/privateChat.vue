@@ -198,6 +198,7 @@
 			this.currentUser = this.imService.currentUser;
 			let privateMessages = this.imService.getPrivateMessages(this.friend.uuid);
 			this.messages = privateMessages.sentMessages;
+			console.log('messages私聊:',this.messages)
 			this.pendingMessages = privateMessages.pendingMessages;
 			uni.setNavigationBarTitle({
 				title : this.friend.name

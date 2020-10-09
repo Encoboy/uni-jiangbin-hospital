@@ -8,7 +8,6 @@
 		</view>
 		<sing-date></sing-date>
 		<view class="table-box">
-			
 			<u-table class="table-title">
 				<u-tr>
 					<block v-for="(item,index) in tabelThArr" :key="index">
@@ -19,7 +18,7 @@
 			<u-table class="table-content">
 				<block v-for="(item,index) in tableUtdContentArr" :key="index">
 					<u-tr class="row">
-						<u-td><text class="name" @click="goInhabitantInfo(item.name)">{{item.name}}</text></u-td>
+						<u-td><text class="name" @click="goInhabitantInfo(item.name,item.id)">{{item.name}}</text></u-td>
 						<u-td><text @click="goDataVisualization">{{item.xuetang}}</text></u-td>
 						<u-td><text @click="goDataVisualization">{{item.xueya}}</text></u-td>
 						<u-td><text @click="goDataVisualization">{{item.xinlv}}</text></u-td>
@@ -40,7 +39,8 @@
 	import SelectDate from '@/components/selectDate/selectDate.vue';
 	import SingleDate from '@/components/selectDate/singleDate.vue';
 	import DocTabbar from '@/components/docTabbar/docTabbar.vue';
-	import {testReq} from '@/api/request.js';
+	import {post} from '@/api/docApi/request.js';
+	import {testUrl} from '@/api/docApi/api.js';
 	export default {
 		components:{
 			'select-date':SelectDate,
@@ -120,7 +120,7 @@
 		onLoad() {
 			const res = uni.getSystemInfoSync();
 			this.windowHeight = res.windowHeight;
-			// this.getData();
+			this.getData();
 		},
 		onShow() {
 			
@@ -131,9 +131,9 @@
 					url:'/pages/doctorpage/home/dataVisualization/dataVisualization'
 				})
 			},
-			goInhabitantInfo(name){
+			goInhabitantInfo(name,id){
 				uni.navigateTo({
-					url:`/pages/doctorpage/home/inhabitantInfo/inhabitantInfo?name=${name}`
+					url:`/pages/doctorpage/home/inhabitantInfo/inhabitantInfo?name=${name}&id=${id}`
 				})
 			},
 			goFeedback(){
@@ -142,7 +142,7 @@
 				})
 			},
 			getData(){
-				testReq().then((res)=>{
+				post(testUrl).then((res)=>{
 					console.log('数据:',res)
 					this.tableUtdContentArr = res.data.result;
 				}).catch(err => {
@@ -189,6 +189,8 @@
 			margin-top: 30rpx;
 			.table-content{
 				overflow-y: scroll;
+				flex: 1;
+				flex-basis: 0;
 				.name{
 					color:blue;
 				}
@@ -203,7 +205,7 @@
 						text-align: center;
 						line-height: 50rpx;
 						border-radius: 10rpx;
-						font-size: 12rpx;
+						font-size: 20rpx;
 					}
 				}
 			}
