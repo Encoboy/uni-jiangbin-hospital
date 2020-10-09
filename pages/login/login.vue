@@ -118,7 +118,7 @@
 					}
 				},0)
 			},
-			// 判断验证是否符合要求
+			// 判断登录验证是否符合要求
 			validate(key){
 				let bool = true;
 				if(!this.rules[key].rule.test(this[key])){
