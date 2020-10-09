@@ -42,7 +42,6 @@
 	import {testUrl} from '@/api/docApi/api.js';
 	export default {
 		components:{
-			'select-date':SelectDate,
 			'sing-date':SingleDate,
 			'doc-tabbar':DocTabbar,
 		},
@@ -140,7 +139,7 @@
 					url:'/pages/doctorpage/home/feedback/feedback'
 				})
 			},
-			getData(){
+			getData(){  // mock 数据请求
 				post(testUrl).then((res)=>{
 					console.log('数据:',res)
 					this.tableUtdContentArr = res.data.result;
@@ -164,10 +163,6 @@
 									delta: 1
 								});
 							} else if (res.cancel) {
-								// uni.showToast({
-								// 	title: '用户点击取消',
-								// 	duration: 1000
-								// })
 							}
 						}
 					});

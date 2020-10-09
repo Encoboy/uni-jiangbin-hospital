@@ -7,7 +7,7 @@
 				</view>
 			</block>
 		</view>
-		<select-date></select-date>
+		<single-date></single-date>
 		<view class="unit">
 			<view class="name">
 				血压
@@ -25,12 +25,13 @@
 <script>
 import LineChart from '@/components/stan-ucharts/LineChart.vue';
 import uniIcons from "@/components/uni-icons/uni-icons.vue";
+import SingleDate from '@/components/selectDate/singleDate.vue';
 export default {
 	name: 'Index',
 	components: {
 		LineChart,
 		uniIcons,
-		'select-date':SelectDate,
+		'single-date':SingleDate,
 	},
 	data() {
 		return {

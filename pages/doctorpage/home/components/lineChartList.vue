@@ -46,7 +46,6 @@
 	export default {
 		components: {
 			LineChart,
-			'select-date':SelectDate,
 			'single-data':SingleDate,
 		},
 		data() {
