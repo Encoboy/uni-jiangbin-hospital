@@ -23,7 +23,7 @@
 								<view class="item-info-top_content" v-else-if="conversation.lastMessage.type == 'file'">[文件消息]</view>
 								<view class="item-info-top_content" v-else-if="conversation.lastMessage.type == 'order'">[自定义消息:订单]</view>
 								<view class="item-info-top_content" v-else>[[未识别内容]]</view>
-								<view class="item-info-bottom_action" @click.stop="showAction(conversation)"></view>
+								<!-- <view class="item-info-bottom_action" @click.stop="showAction(conversation)"></view> -->
 							</view>
 						</view>
 					</view>
@@ -32,13 +32,13 @@
 			<view class="no-conversation" v-else>
 				当前没有会话为空
 			</view>
-			<view class="action-container" v-if="action.show">
+			<!-- <view class="action-container" v-if="action.show">
 				<view class="layer" @click="action.show = false"></view>
 				<view class="action-box">
 					<view class="action-item" @click="topConversation">{{action.conversation.top ? '取消置顶' : '置顶聊天'}}</view>
 					<view class="action-item" @click="removeConversation">删除聊天</view>
 				</view>
-			</view>
+			</view> -->
 			<view class="action-toast" v-if="action.showToast">
 				{{action.toastMessage}}
 			</view>
@@ -193,7 +193,13 @@
 					url:'/pages/chatpage/conversations/conversations'
 				})
 			},
-			onNavigationBarButtonTap(){
+			onNavigationBarButtonTap(e){
+				console.log('e:',e)
+				uni.navigateTo({
+					url:'/pages/chatpage/contacts/contacts'
+				})
+			},
+			goContacts(){
 				uni.navigateTo({
 					url:'/pages/chatpage/contacts/contacts'
 				})
@@ -215,6 +221,7 @@
 		flex-direction: column;
 		box-sizing: border-box;
 		height: 80%;
+		margin: 0 20px;
 	}
 	.conversations .scroll-item{
 		height: 152rpx;
