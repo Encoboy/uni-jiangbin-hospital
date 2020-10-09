@@ -114,6 +114,15 @@
 							icon:'none',
 						})
 					}
+					
+					// 不用模拟登录
+					// getApp().globalData.imService.connectIM();
+					// const doctorLogin = '/pages/doctorpage/home/home';
+					// const patientLogin = '/pages/patientpage/home/home'
+					// uni.navigateTo({
+					// 	url: this.isSelectDoctorAppLogin?doctorLogin:patientLogin,
+					// 	success() {}
+					// })
 				},0)
 			},
 			// 判断验证是否符合要求
