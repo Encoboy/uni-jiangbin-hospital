@@ -42,7 +42,6 @@
 
 <script>
 	import LineChart from '@/components/stan-ucharts/LineChart.vue';
-	import SelectDate from '@/components/selectDate/selectDate.vue';
 	import SingleDate from '@/components/selectDate/singleDate.vue';
 	export default {
 		components: {

@@ -110,14 +110,12 @@
 							url: this.isSelectDoctorAppLogin?doctorLogin:patientLogin,
 							success() {}
 						})
-						
 					} else {
 						uni.showToast({
 							title:'登录失败',
 							icon:'none',
 						})
 					}
-					
 				},0)
 			},
 			// 判断验证是否符合要求

@@ -2,7 +2,7 @@
 // 放置请求地址文件
 const publicUrl = 'http://127.0.0.1:3000';
 
-// 测试
+// 测试模拟路径
 export const testUrl = publicUrl + '/docutor/string';
 
 // Home 居民信息列表

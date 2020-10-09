@@ -1,4 +1,4 @@
-// 错误提示
+// 全局错误提示
 const errdata = {
 	errTest(err){
 		uni.showToast({

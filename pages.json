@@ -250,9 +250,6 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-		// "app-plus":{
-		// 	"titleNView":false
-		// }
 	}
 	// "tabBar": {
 	//     "color": "#7A7E83",

@@ -7,14 +7,15 @@ api目录 处理api请求
 		api.js 统一url管理
 		errHandel.js 错误处理
 		request.js 对uni.request封装
-
+	patApi 患者端api处理目录
+	
 common目录 自定义公共css样式
 
 components 公共组件
-	docTabbar 医生端的tabbar
+	docTabbar 医生端的底部tabbar
 	GoEasyAudioPlayer goeasyIM 处理音频组件
 	GoEasyVideoPlayer goeasyIM 处理视频组件
-	patTabbar 患者端的tabbar
+	patTabbar 患者端的底部tabbar
 	selectDate 自定义封装选择日期组件
 	stan-ucharts ucharts图形(柱状图，条形图)组件
 	uni-icons uniapp的icon样式
@@ -67,7 +68,8 @@ util 工具目录
 uview-ui uview UI框架
 
 二、使用到的第三方插件/库：
-1、IM聊天通信 goeasy 	[](https://www.goeasy.io/cn/im/index.html)
+1、IM聊天通信 goeasy 	[](https://www.goeasy.io/cn/im/index.html) 
+   1.1、goeasy 聊天项目demo地址: [](https://gitee.com/goeasy-io/GoEasyDemo-Uniapp-IM-Chat)
 2、ucharts 图表插件 [](https://ext.dcloud.net.cn/plugin?id=271)
 3、uview UI框架 [](http://uviewui.com)
 4、Iconfont 阿里图表库  [](https://www.iconfont.cn)

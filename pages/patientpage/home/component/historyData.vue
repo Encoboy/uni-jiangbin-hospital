@@ -25,7 +25,6 @@
 <script>
 import LineChart from '@/components/stan-ucharts/LineChart.vue';
 import uniIcons from "@/components/uni-icons/uni-icons.vue";
-import SelectDate from '@/components/selectDate/selectDate.vue';
 export default {
 	name: 'Index',
 	components: {

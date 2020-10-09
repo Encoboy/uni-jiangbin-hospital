@@ -14,6 +14,7 @@ const app = new Vue({
 })
 app.$mount()
 
+//  时间格式化
 Vue.prototype.formatDate = function (t) {
     t = t || Date.now();
     let time = new Date(t);

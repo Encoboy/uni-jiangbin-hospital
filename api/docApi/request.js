@@ -17,7 +17,6 @@ export const post = function(url,params={}){
 				console.log('errData:',errData)
 				errData.errTest(res[0].errMsg)
 			}
-			
 		}).catch(err => {
 			let errs = '服务器错误,请稍候再试';
 			errData.errTest(errs);

@@ -9,18 +9,18 @@
 		onHide: function() {
 			console.log('App Hide')
 		},
-		globalData : {
-			imService : null,
-			isDocutorAppLogin:true
+		globalData : {  // 全局定义数据
+			imService : null, 
+			isDocutorAppLogin:true // true 为医生端 ；false 为患者端
 		}
 	}
 </script>
 
 <style lang="scss">
-	/*每个页面公共css */
-	@import "uni.scss";
-	@import "uview-ui/index.scss";
-	@import "common/common.scss";
-	@import "./static/style/chatInterface.css";
-	@import "./static/style/iconfont/iconfont.css";
+	/*全局css */
+	@import "uni.scss"; // 公共样式 
+	@import "uview-ui/index.scss"; // uview UI 框架样式
+	@import "common/common.scss"; // 自定义公共样式
+	@import "./static/style/chatInterface.css"; // goeasy 聊天页面样式
+	@import "./static/style/iconfont/iconfont.css"; // 阿里图标库样式
 </style>

@@ -36,7 +36,6 @@
 </template>
 
 <script>
-	import SelectDate from '@/components/selectDate/selectDate.vue';
 	import SingleDate from '@/components/selectDate/singleDate.vue';
 	import DocTabbar from '@/components/docTabbar/docTabbar.vue';
 	import {post} from '@/api/docApi/request.js';
